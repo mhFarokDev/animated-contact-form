@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text inp</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+		}
+		header{
+			text-align: center;
+			margin: auto;
+			padding-top: 150px;
+		}
+		.contact {
+    padding-top: 20px;
+    position: relative;
+    width: 357px;
+    margin: auto;
+}
+		input[type="text"] {
+    width: 219px;
+    height: 23px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+}
+		label {
+    position: absolute;
+    left: 19%;
+    font-size: 20px;
+    top: 19px;
+}
+.contact:focus-within label{
+	top: 5px;
+	font-size: 17px;
+	color: green;
+	transition: 0.7s;
+}
+.contact:focus-within input{
+
+	border-bottom: 3px solid #00c518;
+	transition: 1s;
+}
+/* js add class with value */
+.addlab{
+	top: 5px;
+	font-size: 17px;
+	color: green !important;
+	transition: 0.7s;
+}
+.addinp{
+
+	border-bottom: 3px solid #00c518 !important;
+	transition: 1s;
+}
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<h2>Pleas Login </h2>
+		<div class="contact">
+			<input type="text" id="inp1" onkeyup="clickok()">
+			<label id="ssf" for="inp1">First Name</label>
+		</div>
+		<div class="contact">
+			<input type="text" id="inp2" onkeyup="clickok2()">
+			<label id="ssf2" for="inp2">Last Name</label>
+		</div>
+		<p id="showValue"></p>
+	</header>
+	
+	<script type="text/javascript">
+		
+		function clickok(){
+			var x = document.getElementById('inp1').value;
+		var y = x.length;
+			if (x==0) {
+			document.querySelector("#inp1").classList.remove("addinp");
+			document.querySelector("#ssf").classList.remove("addlab");
+		}else{
+			document.querySelector("#inp1").className="addinp";
+			document.querySelector("#ssf").className="addlab";
+		}
+		}
+////// ggggg 2nd
+
+		function clickok2(){
+			var x = document.getElementById('inp2').value;
+		var y = x.length;
+			if (x==0) {
+			document.querySelector("#inp2").classList.remove("addinp");
+			document.querySelector("#ssf2").classList.remove("addlab");
+		}else{
+			document.querySelector("#inp2").className="addinp";
+			document.querySelector("#ssf2").className="addlab";
+		}
+		}
+		
+		
+	</script>
+</body>
+</html>
